@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056585CD132C2A8F00DB3451 /* rs232.m in Sources */ = {isa = PBXBuildFile; fileRef = 056585CC132C2A8F00DB3451 /* rs232.m */; };
 		056EC3D7132C285C0009E440 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056EC3D6132C285C0009E440 /* Cocoa.framework */; };
 		056EC3E1132C285C0009E440 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 056EC3DF132C285C0009E440 /* InfoPlist.strings */; };
 		056EC3E4132C285C0009E440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EC3E3132C285C0009E440 /* main.m */; };
@@ -16,17 +17,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056585CB132C2A8F00DB3451 /* rs232.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rs232.h; sourceTree = "<group>"; };
+		056585CC132C2A8F00DB3451 /* rs232.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rs232.m; sourceTree = "<group>"; };
 		056EC3D2132C285C0009E440 /* remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		056EC3D6132C285C0009E440 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		056EC3D9132C285C0009E440 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		056EC3DA132C285C0009E440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		056EC3DB132C285C0009E440 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		056EC3DE132C285C0009E440 /* remote-Info.plist */ = {isa = PBXFileReference; path = "remote-Info.plist"; sourceTree = "<group>"; };
+		056EC3DE132C285C0009E440 /* remote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "remote-Info.plist"; sourceTree = "<group>"; };
 		056EC3E0132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		056EC3E2132C285C0009E440 /* remote-Prefix.pch */ = {isa = PBXFileReference; path = "remote-Prefix.pch"; sourceTree = "<group>"; };
+		056EC3E2132C285C0009E440 /* remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "remote-Prefix.pch"; sourceTree = "<group>"; };
 		056EC3E3132C285C0009E440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		056EC3E6132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		056EC3E8132C285C0009E440 /* remoteAppDelegate.h */ = {isa = PBXFileReference; path = remoteAppDelegate.h; sourceTree = "<group>"; };
+		056EC3E8132C285C0009E440 /* remoteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteAppDelegate.h; sourceTree = "<group>"; };
 		056EC3E9132C285C0009E440 /* remoteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteAppDelegate.m; sourceTree = "<group>"; };
 		056EC3EC132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +89,8 @@
 				056EC3E9132C285C0009E440 /* remoteAppDelegate.m */,
 				056EC3EB132C285C0009E440 /* MainMenu.xib */,
 				056EC3DD132C285C0009E440 /* Supporting Files */,
+				056585CB132C2A8F00DB3451 /* rs232.h */,
+				056585CC132C2A8F00DB3451 /* rs232.m */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			files = (
 				056EC3E4132C285C0009E440 /* main.m in Sources */,
 				056EC3EA132C285C0009E440 /* remoteAppDelegate.m in Sources */,
+				056585CD132C2A8F00DB3451 /* rs232.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +284,7 @@
 				056EC3F2132C285C0009E440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
