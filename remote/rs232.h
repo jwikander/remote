@@ -6,11 +6,17 @@
 //  Copyright 2011 None. All rights reserved.
 //
 
+#import <stdio.h>
+
 #import <Foundation/Foundation.h>
 
 
 @interface rs232 : NSObject {
-    
+    int fileDescriptor;
 }
+- (void)openPort: (NSString*) bsdPath;
+- (void)closePort;
+    
+
 
 @end

@@ -11,4 +11,15 @@
 
 @implementation rs232
 
+- (void)openPort: (NSString*) bsdPath
+{
+    
+}
+
+
+- (void)closePort
+{
+    
+}
+
 @end
