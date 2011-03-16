@@ -11,7 +11,6 @@
 		056EC3D7132C285C0009E440 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056EC3D6132C285C0009E440 /* Cocoa.framework */; };
 		056EC3E1132C285C0009E440 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 056EC3DF132C285C0009E440 /* InfoPlist.strings */; };
 		056EC3E4132C285C0009E440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EC3E3132C285C0009E440 /* main.m */; };
-		056EC3E7132C285C0009E440 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 056EC3E5132C285C0009E440 /* Credits.rtf */; };
 		056EC3EA132C285C0009E440 /* remoteAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 056EC3E9132C285C0009E440 /* remoteAppDelegate.m */; };
 		056EC3ED132C285C0009E440 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 056EC3EB132C285C0009E440 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
@@ -28,7 +27,6 @@
 		056EC3E0132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		056EC3E2132C285C0009E440 /* remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "remote-Prefix.pch"; sourceTree = "<group>"; };
 		056EC3E3132C285C0009E440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		056EC3E6132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		056EC3E8132C285C0009E440 /* remoteAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteAppDelegate.h; sourceTree = "<group>"; };
 		056EC3E9132C285C0009E440 /* remoteAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteAppDelegate.m; sourceTree = "<group>"; };
 		056EC3EC132C285C0009E440 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				056EC3DF132C285C0009E440 /* InfoPlist.strings */,
 				056EC3E2132C285C0009E440 /* remote-Prefix.pch */,
 				056EC3E3132C285C0009E440 /* main.m */,
-				056EC3E5132C285C0009E440 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				056EC3E1132C285C0009E440 /* InfoPlist.strings in Resources */,
-				056EC3E7132C285C0009E440 /* Credits.rtf in Resources */,
 				056EC3ED132C285C0009E440 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,14 +178,6 @@
 				056EC3E0132C285C0009E440 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		056EC3E5132C285C0009E440 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				056EC3E6132C285C0009E440 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		056EC3EB132C285C0009E440 /* MainMenu.xib */ = {
