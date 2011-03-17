@@ -20,8 +20,13 @@
     return self;
 }
 
-- (void)openPort: (NSString*) bsdPath
+- (void)openPort: (NSString*) path
 {
+	[bsdPath initWithString:path];
+	
+	// XXX debug
+	bsdPath = @"/dev/tty.usbserial-FTF3DHJK";
+	
     // Open the port read/write, no terminal, non blocking 
     
     fileDescriptor = open([bsdPath UTF8String], O_RDWR | O_NOCTTY | O_NONBLOCK);
@@ -30,6 +35,8 @@
                strerror(errno), errno);
         exit(1);
     }
+	
+	printf("Port open\n");
     
     
     // Prevent additional opens to the port
@@ -77,6 +84,7 @@
                            !PARENB |    // No parity
                            !CSTOPB);    // 1 stop bit
     
+	
     // Enable the new options
     
     if (tcsetattr(fileDescriptor, TCSANOW, &optionsNew) == -1) {
@@ -90,7 +98,24 @@
 
 - (void)closePort
 {
+	// Reset the port attributes to original values
+	
+    if (tcsetattr(fileDescriptor, TCSANOW, &optionsOriginal) == -1)
+    {
+        printf("Error resetting attributes on %s - %s(%d).\n",
+			   [bsdPath UTF8String], strerror(errno), errno);
+    }
+	
+    close(fileDescriptor);
+
     
+}
+
+- (void)issueCommand
+{
+	printf("\n\nWRITING!\n\n");
+	char* command = "VU\r\n";
+	write(fileDescriptor, command, strlen(command));
 }
 
 @end

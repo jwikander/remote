@@ -15,12 +15,14 @@
 
 @interface rs232 : NSObject {
     int fileDescriptor;
+	NSString* bsdPath;
     struct termios optionsOriginal;
     struct termios optionsNew;
 }
 
 - (id)init;
-- (void)openPort: (NSString*) bsdPath;
+- (void)openPort: (NSString*) path;
+- (void)issueCommand;
 - (void)closePort;
     
 
