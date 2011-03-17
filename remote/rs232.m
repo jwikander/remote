@@ -57,6 +57,34 @@
                [bsdPath UTF8String], strerror(errno), errno);
         exit(1);
     }
+    
+    
+    // Save original options to new options as starting point
+    
+    optionsNew = optionsOriginal;
+    
+    
+    // XXX DEBUG
+    
+    printf("Original input rate: %d", (int) cfgetispeed(&optionsNew));
+    printf("\nOriginal input rate: %d", (int) cfgetispeed(&optionsNew));
+    
+    
+    // Setup the port according to Pioneer manual
+    
+    cfsetspeed(&optionsNew, B9600);
+    optionsNew.c_cflag |= (CS8 |        // 8 data bits
+                           !PARENB |    // No parity
+                           !CSTOPB);    // 1 stop bit
+    
+    // Enable the new options
+    
+    if (tcsetattr(fileDescriptor, TCSANOW, &optionsNew) == -1) {
+        printf("Error setting attributes on %s - %s(%d).\n",
+               [bsdPath UTF8String], strerror(errno), errno);
+        exit(1);
+    }
+                           
 }
 
 
